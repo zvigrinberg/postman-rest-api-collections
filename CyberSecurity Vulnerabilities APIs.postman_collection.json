@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "88a834d2-0c77-43d4-9f2d-ab97ae0acf0d",
+		"name": "CyberSecurity Vulnerabilities APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37540432"
+	},
+	"item": [
+		{
+			"name": "NVD API",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Bugzilla - General Bug Details",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Bugzilla - General Bug Comments",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "RHSA - CSAF (Common Security Advisory Framework ) - Get All",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "RHSA - CSAF - Get One",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "RHSA - CVE - Get all",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "RHSA - CVE - Get one",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "RHSA - All OVAL",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GHSA - All Advisories",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GHSA - All Advisories Per CVE",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "OSV - Get Vulns of a Package - By Purl",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"package\": {\n        \"purl\": \"pkg:maven/org.apache.logging.log4j/log4j-core@2.17.0\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.osv.dev/v1/query",
+					"protocol": "https",
+					"host": [
+						"api",
+						"osv",
+						"dev"
+					],
+					"path": [
+						"v1",
+						"query"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "OSV - Get Vulns of a Package",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"package\": {\n        \"name\": \"org.apache.logging.log4j:log4j-core\",\n        \"ecosystem\": \"Maven\"\n    },\n    \"version\": \"2.17.0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.osv.dev/v1/query",
+					"protocol": "https",
+					"host": [
+						"api",
+						"osv",
+						"dev"
+					],
+					"path": [
+						"v1",
+						"query"
+					]
+				},
+				"description": "Generated from cURL: curl -d \\\n  '{\"package\": {\"name\": \"mruby\"}, \"version\": \"2.1.2rc\"}' \\\n  \"https://api.osv.dev/v1/query\""
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "$RHSA_ID",
+			"value": "RHSA-2024:8935",
+			"type": "default"
+		},
+		{
+			"key": "$CVE_ID",
+			"value": "CVE-2024-0406",
+			"type": "default"
+		},
+		{
+			"key": "$BUG_ID",
+			"value": "2257749",
+			"type": "default"
+		}
+	]
+}
